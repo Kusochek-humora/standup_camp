@@ -1,0 +1,16 @@
+@mixin font($a, $b) {
+    font-size: $a;
+    line-height: $b;
+    // font-weight: $c;
+    // color: $d;
+}
+@mixin flex-center ($valueFlex) {
+    display: $valueFlex;
+    align-items: center;
+    justify-content: center;
+}
+
+$black: #131313;
+$white: #fff;
+$color: #d72a28;
+$grey: #848484;

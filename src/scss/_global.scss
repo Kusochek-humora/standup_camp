@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    // font-family: "Golos Text", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+address {
+    font-style: inherit;
+}
+p {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+input {
+    border: inherit;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 30px 0;
+    margin: 0 auto;
+    @media screen and (max-width: 500px) {
+        padding: 0 20px 0;
+    }
+    @media screen and (max-width: 360px) {
+        padding: 0 10px 0;
+    }
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.reset-button {
+    margin: 0;
+    border: 0;
+    border: 1px solid black;
+    padding: 0;
+    font-family: inherit;
+    text-align: left;
+    // font-size: 1em;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:disabled {
+        cursor: default;
+    }
+}
+.title {
+    font-size: 80px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.text {
+    font-weight: 400;
+    font-family: "Golos Text", sans-serif;
+}
+.sub-title{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.button{
+    padding: 10px;
+    min-height: 60px;
+    height: auto;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+// .container-fluid{
+//     max-width: 100%;
+// 	margin: 0 auto;
+// }
