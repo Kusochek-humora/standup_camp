@@ -39,4 +39,4 @@ bower_components
 .LSOverride
 .vs
 
-dist
+src
