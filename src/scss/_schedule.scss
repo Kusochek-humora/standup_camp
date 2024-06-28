@@ -144,7 +144,7 @@
         @include transition;
         min-height: 34px;
         height: auto;
-        max-width: 130px;
+        min-width: 130px;
         width: 100%;
 
         white-space: nowrap;
