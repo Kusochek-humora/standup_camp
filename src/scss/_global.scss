@@ -16,6 +16,11 @@ body {
 body {
     font-family: "Oswald", sans-serif;
     // font-family: "Golos Text", sans-serif;
+    margin: 0;
+    background-color: $black;
+    &.active {
+        overflow: hidden;
+    }
 }
 
 h1,
@@ -46,7 +51,9 @@ address {
 p {
     margin: 0;
 }
-
+figure,figcaption{
+    margin: 0;
+}
 ul,
 ol,
 li {
@@ -127,11 +134,11 @@ input {
     font-weight: 400;
     font-family: "Golos Text", sans-serif;
 }
-.sub-title{
+.sub-title {
     font-weight: 300;
     text-transform: uppercase;
 }
-.button{
+.button {
     padding: 10px;
     min-height: 60px;
     height: auto;
@@ -141,4 +148,7 @@ input {
 // .container-fluid{
 //     max-width: 100%;
 // 	margin: 0 auto;
+// }
+// ::-webkit-scrollbar {
+//     display: none;
 // }

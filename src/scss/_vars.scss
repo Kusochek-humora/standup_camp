@@ -4,13 +4,15 @@
     // font-weight: $c;
     // color: $d;
 }
-@mixin flex-center ($valueFlex) {
+@mixin flex-center($valueFlex) {
     display: $valueFlex;
     align-items: center;
     justify-content: center;
 }
-
+@mixin transition {
+    transition: 0.3s all;
+}
 $black: #131313;
 $white: #fff;
-$color: #d72a28;
+$red: #d72a28;
 $grey: #848484;
