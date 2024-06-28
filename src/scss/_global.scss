@@ -20,6 +20,7 @@ body {
     background-color: $black;
     &.active {
         overflow: hidden;
+// padding-right: 17px;
     }
 }
 
@@ -51,7 +52,8 @@ address {
 p {
     margin: 0;
 }
-figure,figcaption{
+figure,
+figcaption {
     margin: 0;
 }
 ul,
