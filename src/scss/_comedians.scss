@@ -1,0 +1,111 @@
+.comedians {
+    margin-bottom: 150px;
+}
+
+.gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-content: center;
+    @media screen and (max-width: 580px) {
+        display: flex;
+        overflow: auto;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0px;
+            height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $grey;
+            border: 0px none $grey;
+            border-radius: 50px;
+
+            @include transition;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $red;
+        }
+        &::-webkit-scrollbar-thumb:active {
+            background: $red;
+        }
+        &::-webkit-scrollbar-track {
+            background: #ffffff00;
+            border: 0px none #ffffff00;
+            border-radius: 19px;
+        }
+    }
+}
+
+.comedian {
+    // @media screen and (max-width: 1137px) {
+    // $total-items: 12;
+
+    // @for $i from 1 through $total-items {
+    //     &:nth-child(#{$total-items}n + #{$i}) {
+    //         @if $i % 4 == 0 {
+    //             order: $total-items + 1;
+    //         }
+    //     }
+    // }
+    // }
+    @media screen and (max-width: 1137px) {
+        // display: flex;
+        // align-items: center;
+    }
+    @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+}
+.columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &:nth-child(3) {
+        margin-top: 20px;
+    }
+    &:nth-child(2) {
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 768px) {
+        // margin-top: 0 !important;
+
+        &:nth-child(4) {
+            display: contents;
+            .comedian {
+                align-self: flex-start;
+            }
+        }
+    }
+    @media screen and (max-width: 580px) {
+        margin-top: 0 !important;
+        display: flex !important ;
+        flex-direction: row !important ;
+        .comedian {
+            width: 220px;
+            height: 240px;
+            position: relative;
+            img {
+                max-width: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                object-position: top center;
+            }
+        }
+    }
+}
+.comedian img {
+    max-width: 100%;
+    height: auto;
+}

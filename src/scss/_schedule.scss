@@ -1,7 +1,8 @@
 .schedule {
     background-color: $white;
     position: relative;
-    margin-top: 95px;
+    margin: 95px 0 0 0;
+    padding-bottom: 100px;
     // max-width: 100vw;
     width: 100%;
     // overflow: hidden;
@@ -22,8 +23,8 @@
         background-position-y: top;
         background-position-x: right;
     }
-    &__container {
-    }
+    // &__container {
+    // }
 
     &__top {
         padding-top: 45px;
@@ -169,7 +170,7 @@
         flex-direction: column;
         min-height: 474px;
         height: auto;
-        @media screen and (max-width:768px){
+        @media screen and (max-width: 768px) {
             flex: 1 1 264px;
         }
     }

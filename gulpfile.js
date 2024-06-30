@@ -32,6 +32,8 @@ export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
 		'node_modules/swiper/swiper-bundle.js',
+		'node_modules/mixitup/dist/mixitup.min.js',
+		'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
 	])
 		.pipe(plumber())
 		.pipe(uglify())
@@ -61,6 +63,7 @@ export const buildCss = (done) => {
 	gulp.src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/swiper/swiper-bundle.css',
+		
 	])
 		.pipe(prefixer())
 		.pipe(csso())
