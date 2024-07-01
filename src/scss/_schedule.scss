@@ -162,23 +162,27 @@
         align-items: stretch;
         gap: 18px;
         flex-wrap: wrap;
+        @media screen and (max-width: 768px){
+            justify-content: center;
+        }
     }
 
     &__event {
         flex: 0 1 264px;
+
         display: flex;
         flex-direction: column;
         min-height: 474px;
         height: auto;
         @media screen and (max-width: 768px) {
-            flex: 1 1 264px;
+            flex: 0 1 264px;
         }
     }
 
     &__event-picture {
         position: relative;
-        aspect-ratio: 1/1;
-
+        // aspect-ratio: 1/1;
+        height: 264px;
         margin-bottom: 20px;
     }
 
@@ -204,6 +208,7 @@
         font-weight: 500;
         color: $black;
         margin-bottom: 10px;
+        text-align: justify;
     }
 
     &__event-date {

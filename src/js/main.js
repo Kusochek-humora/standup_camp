@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // бегающая строка в section.promo
-    const SwiperTop = new Swiper('.promo__marquee', {
+    const swiperTop = new Swiper('.promo__marquee', {
         spaceBetween: 20,
         centeredSlides: true,
         speed: 6000,
@@ -48,12 +48,88 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Вызываем функцию после инициализации Isotope и при изменении размера окна
-// iso.on('arrangeComplete', centerIsotopeItems);
-// window.addEventListener('resize', centerIsotopeItems);
+    // адаптация gallery
 
-// // Инициализация центрирования при загрузке страницы
-// centerIsotopeItems();
+    const gallery = document.getElementById('gallery');
+    const lastColumn = document.getElementById('column-4');
+    const comediansColLast = lastColumn.querySelectorAll('.comedians__comedian');
+    const otherColumns = document.querySelectorAll('.comedians__column');
+    const mediaQuery768 = window.matchMedia('(max-width: 768px)');
+
+    function redistributeItems() {
+        lastColumn.style.display = "none"
+        comediansColLast.forEach((item, index) => {
+            const targetColumn = otherColumns[index % otherColumns.length];
+            targetColumn.appendChild(item);
+        });
+    };
+    function returnItemsToLastColumn() {
+        lastColumn.removeAttribute('style');
+        comediansColLast.forEach((item) => {
+            lastColumn.appendChild(item);
+        });
+    };
+
+    function handleMediaQueryChange(e) {
+        if (e.matches) {
+            redistributeItems();
+        } else {
+            returnItemsToLastColumn();
+        }
+    }
+
+    mediaQuery768.addListener(handleMediaQueryChange);
+    handleMediaQueryChange(mediaQuery768);
+
+    let swiperComedians = null;
+
+    function initSwiper() {
+        swiperComedians = new Swiper('.comedians__swiper', {
+            // centeredSlides: true,
+            slidesPerView: 'auto',
+            grabCursor: true,
+            freeMode: false,
+            loop: true,
+            mousewheel: false,
+            spaceBetween: 20,
+            keyboard: {
+                enabled: true
+            },
+
+            navigation: {
+                nextEl: '.comedians__swiper-next',
+                prevEl: '.comedians__swiper-prev',
+            },
+            breakpoints: {
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+            },
+        });
+    }
+
+    function destroySwiper() {
+        if (swiperComedians !== null) {
+            swiperComedians.destroy(true, true);
+            swiperComedians = null;
+        }
+    }
+
+    // Проверка ширины экрана при загрузке страницы и при изменении размера окна
+    function checkScreenSize() {
+        if (window.matchMedia('(max-width: 500px)').matches) {
+            initSwiper();
+        } else {
+            destroySwiper();
+        }
+    }
+
+    // Проверяем размер экрана при загрузке страницы
+    checkScreenSize();
+
+    // Проверяем размер экрана при изменении размера окна
+    window.addEventListener('resize', checkScreenSize);
 });
 
 
