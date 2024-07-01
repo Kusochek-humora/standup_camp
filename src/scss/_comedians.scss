@@ -111,11 +111,33 @@
     }
 
     &__comedian {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            img {
+                filter: none;
+            }
+        }
+        span {
+            padding: 5px 4px;
+            background-color: $red;
+            text-transform: uppercase;
+            color: $white;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-weight: 600;
+            font-size: 16px;
+            pointer-events: none;
+        }
         @media screen and (max-width: 768px) {
             display: flex;
             align-items: center;
         }
         img {
+            pointer-events: none;
+            filter: grayscale(100%);
+            @include transition;
             @media screen and (max-width: 500px) {
                 height: 290px !important;
                 object-fit: contain;
@@ -137,17 +159,53 @@
         display: flex;
     }
 
-    // &__swiper-slide {
-    //     // width: 223px !important;
-    //     // // height: 321px !important;
-    //     // width: fit-content !important;
-    // }
-
+    &__swiper-slide {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            img {
+                filter: none;
+            }
+        }
+        img {
+            pointer-events: none;
+            height: 321px;
+            filter: grayscale(100%);
+            @include transition;
+        }
+        span {
+            pointer-events: none;
+            padding: 5px 4px;
+            background-color: $red;
+            text-transform: uppercase;
+            color: $white;
+            position: absolute;
+            right: 8px;
+            bottom: 20px;
+            z-index: 1;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+    &__swiper-btn {
+        svg {
+            path {
+                @include transition;
+                fill: $white;
+            }
+        }
+        &:hover {
+            svg > path {
+                fill: $red;
+            }
+        }
+    }
     &__swiper-btns {
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
         display: none;
+
         @media screen and (max-width: 500px) {
             display: flex;
         }

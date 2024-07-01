@@ -177,6 +177,9 @@
         @media screen and (max-width: 768px) {
             flex: 0 1 264px;
         }
+        @media screen and (max-width: 500px) {
+            flex: 1 1 264px;
+        }
     }
 
     &__event-picture {

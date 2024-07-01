@@ -20,7 +20,10 @@ body {
     background-color: $black;
     &.active {
         overflow: hidden;
-// padding-right: 17px;
+        // padding-right: 17px;
+    }
+    &:has(dialog[open]) {
+        overflow: hidden;
     }
 }
 

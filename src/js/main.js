@@ -127,7 +127,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // модальные окна section.comedians 
+    const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
+    const modalContent = document.querySelectorAll('[data-content-id]');
+    const wrapperTriggers = document.getElementById('comedians');
+    const closeBtns = document.querySelectorAll('[data-close]');
+    function modalOpen(e) {
+        const target = e.target;
+        if (target && target.classList.contains('modal-btn')) {
+            const triggerId = target.dataset.modalTrigger;
+            modalContent.forEach(modal => {
+                modal.style.display = 'none';
+                modalContent[triggerId - 1].removeAttribute('style');
+                modalContent[triggerId - 1].showModal();
+                modalContent[triggerId - 1].classList.add('active');
+            });
+            modalContent[triggerId - 1].showModal();
+            modalContent[triggerId - 1].classList.add('active');
 
+        };
+    };
+    function closeModal() {
+        modalContent.forEach(modal => {
+            if (modal && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                modal.removeAttribute('style');
+                modal.close();
+            }
+        });
+    }
+    function modalHandler(e) {
+        const target = e.target;
+        if (target) {
+            if (target.hasAttribute('data-modal-trigger')) return;
+            if (target.hasAttribute('data-close')) closeModal();
+            if (!target.closest('.modal__inner')) closeModal();
+
+        };
+    };
+    document.addEventListener('click', modalHandler);
+    wrapperTriggers.addEventListener('click', modalOpen);
 });
 
 

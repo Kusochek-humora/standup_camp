@@ -1,0 +1,292 @@
+.modal {
+    position: fixed;
+    visibility: hidden;
+    overflow: hidden;
+
+    display: block;
+    max-width: 962px;
+    width: 100%;
+    opacity: 0;
+    border: none;
+    padding: 0;
+    @include transition;
+    @media screen and (max-width: 500px){
+        margin: 0;
+        min-height: 100%;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    &::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $red;
+        border: 0px none $red;
+        // border-radius: 50px;
+
+        @include transition;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $red;
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background: $red;
+    }
+    &::-webkit-scrollbar-track {
+        background: $black;
+        border: none;
+        // border-radius: 19px;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 30px 0;
+        background: #0d0d0d;
+        padding: 40px;
+        box-shadow: 0px 0px 100px 0px rgba(255, 255, 255, 0.25);
+        @media screen and (max-width: 1024px) {
+            padding: 30px;
+        }
+        @media screen and (max-width: 500px) {
+            padding: 20px;
+            min-height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        font-size: 40px;
+        text-transform: uppercase;
+        span:first-child {
+            color: $white;
+        }
+        span:last-child {
+            color: $red;
+        }
+    }
+    &__close-top {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        svg {
+            pointer-events: none;
+            path {
+                @include transition;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+    }
+    &__caption {
+        display: flex;
+        gap: 0 30px;
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+    &__caption-picture {
+        flex: 0 0 263px;
+        // width: 100%;
+        height: 380px;
+        position: relative;
+        @media screen and (max-width: 500px) {
+            margin-bottom: 30px;
+            flex: none;
+            width: 100%;
+            // height: auto;
+            height: 450px;
+        }
+    }
+
+    &__caption-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        @media screen and (max-width: 500px) {
+            object-position: top center;
+        }
+    }
+
+    &__caption-info {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+
+    &__caption-main-text {
+        font-size: 16px;
+        font-family: "Golos Text", sans-serif;
+        color: $white;
+        line-height: 150%;
+        // margin-bottom: 20px;
+    }
+
+    &__caption-sub-text {
+        color: #a5a5a5;
+        font-family: "Golos Text", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    &__social {
+        display: flex;
+        gap: 0 20px;
+        margin-top: auto;
+    }
+
+    &__social-item {
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+
+    &__social-link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__line {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #616161;
+    }
+
+    &__video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__video-title {
+        text-align: center;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: $white;
+
+        margin-bottom: 10px;
+    }
+
+    &__video-text {
+        text-align: center;
+        font-size: 16px;
+        color: $white;
+        font-family: "Golos Text", sans-serif;
+
+        margin-bottom: 30px;
+    }
+
+    &__video-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+        }
+    }
+
+    &__video-item {
+        flex: 0 0 calc(50% - 30px);
+        height: 280px;
+        position: relative;
+        z-index: 1;
+        svg {
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            opacity: 1 !important;
+            path {
+                // fill: green;
+                @include transition;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: $red;
+                }
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            flex: auto;
+            width: 100%;
+        }
+    }
+
+    &__video-poster {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+    &__close-button {
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px auto 0;
+        // text-align: center;
+        color: $red;
+        border: 2px solid $red;
+        max-width: 300px;
+        width: 100%;
+        min-height: 60px;
+        height: auto;
+        @include transition;
+
+        &:hover {
+            background-color: $white;
+            border: 2px solid $white;
+        }
+        @media screen and (max-width: 500px) {
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.modal[open] {
+    opacity: 1;
+    visibility: visible;
+    overflow: auto;
+}
+.modal::backdrop {
+    @include transition;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
