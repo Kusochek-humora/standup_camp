@@ -43,14 +43,8 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     triggersContainer.addEventListener('click', triggersHandler);
 
+    // адаптация gallery section.comedians
 
-
-
-
-
-    // адаптация gallery
-
-    const gallery = document.getElementById('gallery');
     const lastColumn = document.getElementById('column-4');
     const comediansColLast = lastColumn.querySelectorAll('.comedians__comedian');
     const otherColumns = document.querySelectorAll('.comedians__column');
@@ -89,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesPerView: 'auto',
             grabCursor: true,
             freeMode: false,
-            loop: true,
+            loop: false,
             mousewheel: false,
             spaceBetween: 20,
             keyboard: {
@@ -116,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Проверка ширины экрана при загрузке страницы и при изменении размера окна
+
     function checkScreenSize() {
         if (window.matchMedia('(max-width: 500px)').matches) {
             initSwiper();
@@ -125,11 +119,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Проверяем размер экрана при загрузке страницы
     checkScreenSize();
 
-    // Проверяем размер экрана при изменении размера окна
+
     window.addEventListener('resize', checkScreenSize);
+
+
+
+    // модальные окна section.comedians 
+
 });
 
 

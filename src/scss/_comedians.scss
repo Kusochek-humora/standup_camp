@@ -1,5 +1,5 @@
 .comedians {
-    margin-bottom: 150px;
+    padding-bottom: 75px;
     &__link {
         display: flex;
         align-items: center;
@@ -14,10 +14,12 @@
         height: auto;
         @include transition;
 
-        &:hover{
-            background-color:$white;
+        &:hover {
+            background-color: $white;
             border: 2px solid $white;
-            
+        }
+        @media screen and (max-width: 500px) {
+            max-width: 100%;
         }
     }
 
@@ -135,11 +137,11 @@
         display: flex;
     }
 
-    &__swiper-slide {
-        // width: 223px !important;
-        // // height: 321px !important;
-        // width: fit-content !important;
-    }
+    // &__swiper-slide {
+    //     // width: 223px !important;
+    //     // // height: 321px !important;
+    //     // width: fit-content !important;
+    // }
 
     &__swiper-btns {
         margin-top: 50px;
