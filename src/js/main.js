@@ -120,12 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     checkScreenSize();
-
-
     window.addEventListener('resize', checkScreenSize);
-
-
-
     // модальные окна section.comedians 
     const modalTriggers = document.querySelectorAll('[data-modal-trigger]');
     const modalContent = document.querySelectorAll('[data-content-id]');
@@ -166,6 +161,46 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     document.addEventListener('click', modalHandler);
     wrapperTriggers.addEventListener('click', modalOpen);
+
+
+    // swiper корусель section.media
+    const mediaSwiper = new Swiper('.media__swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.media__swiper-next',
+            prevEl: '.media__swiper-prev',
+        },
+    });
+
+    const dinnerswiper = new Swiper('.dinner__swiper', {
+
+
+        navigation: {
+            nextEl: '.dinner__swiper-next',
+            prevEl: '.dinner__swiper-prev',
+        },
+        breakpoints: {
+            320: {
+                initialSlide: 0,
+                slidesPerView: 1.1,
+                spaceBetween: 20,
+                // centeredSlides: true,
+            },
+            500: {
+                initialSlide: 0,
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            1024: {
+                initialSlide: 1,
+
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+        },
+    });
 });
 
 
