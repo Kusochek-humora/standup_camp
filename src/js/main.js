@@ -163,22 +163,30 @@ document.addEventListener('DOMContentLoaded', function () {
     wrapperTriggers.addEventListener('click', modalOpen);
 
 
-    // swiper корусель section.media
+    // swiper корусель section.media, section.special
     const mediaSwiper = new Swiper('.media__swiper', {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
+
         navigation: {
             nextEl: '.media__swiper-next',
             prevEl: '.media__swiper-prev',
         },
+        breakpoints: {
+            320: {
+                initialSlide: 0,
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                // centeredSlides: true,
+            },
+            500: {
+                slidesPerView: 'auto',
+                spaceBetween: 20,
+            }
+        },
     });
-
-    const dinnerswiper = new Swiper('.dinner__swiper', {
-
-
+    const createSwiperOptions = (nextEl, prevEl) => ({
         navigation: {
-            nextEl: '.dinner__swiper-next',
-            prevEl: '.dinner__swiper-prev',
+            nextEl,
+            prevEl,
         },
         breakpoints: {
             320: {
@@ -195,13 +203,27 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             1024: {
                 initialSlide: 1,
-
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
         },
     });
+
+    const dinnerSwiper = new Swiper('.dinner__swiper', createSwiperOptions('.dinner__swiper-next', '.dinner__swiper-prev'));
+    const specialSwiper = new Swiper('.special__swiper', createSwiperOptions('.special__swiper-next', '.special__swiper-prev'));
+
+    // обработка формы .special>form
+    const telInput = document.getElementById('tel');
+    VMasker(telInput).maskPattern('+9 (999) 999-99-99')
+    console.dir(telInput)
+    telInput.addEventListener('input', function (event) {
+        const target = event.target
+        console.log(target.value);
+        target.value = `+7${target.value.slice(2)} `;
+    });
 });
+
+
 
 
 

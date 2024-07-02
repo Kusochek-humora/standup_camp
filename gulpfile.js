@@ -34,6 +34,10 @@ export const buildJs = (done) => {
 		'node_modules/swiper/swiper-bundle.js',
 		'node_modules/mixitup/dist/mixitup.min.js',
 		'node_modules/isotope-layout/dist/isotope.pkgd.min.js',
+		'node_modules/vanilla-masker/build/vanilla-masker.min.js',
+		// 'node_modules/cleave.js/dist/cleave.min.js',
+		// 'node_modules/cleave.js/dist/addons/cleave-phone.kz.js',
+
 	])
 		.pipe(plumber())
 		.pipe(uglify())
@@ -63,7 +67,7 @@ export const buildCss = (done) => {
 	gulp.src([
 		'node_modules/normalize.css/normalize.css',
 		'node_modules/swiper/swiper-bundle.css',
-		
+
 	])
 		.pipe(prefixer())
 		.pipe(csso())

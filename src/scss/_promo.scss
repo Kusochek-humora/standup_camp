@@ -89,8 +89,7 @@
         max-width: 125px;
     }
 
-    &__features-img {
-    }
+
 
     &__features-description {
         strong {
@@ -117,8 +116,24 @@
         }
         &__features {
             padding: 0 10px;
-            gap: 0;
-            justify-content: space-between;
+            gap:0 20px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    @media screen and(max-width:500px) {
+        &__features {
+            &-item {
+                flex: 0 0 33%;
+                align-items: center;
+            }
+            &-description {
+                text-align: center;
+                strong {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
     }
 }

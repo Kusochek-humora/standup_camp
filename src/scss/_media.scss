@@ -29,7 +29,7 @@
 
         margin-bottom: 80px;
 
-        @media screen and (max-width: 815px) {
+        @media screen and (max-width: 1024px) {
             flex-direction: column;
             align-items: flex-start;
             gap: 30px 0;
@@ -39,7 +39,7 @@
 
     &__title {
         align-self: flex-end;
-        @media screen and (max-width: 815px) {
+        @media screen and (max-width: 1024px) {
             align-self: auto;
         }
         span:first-of-type {
@@ -63,6 +63,12 @@
         span:last-of-type {
             color: $black;
         }
+        @media screen and (max-width: 768px) {
+            span:nth-of-type(2),
+            span:last-of-type {
+                font-size: 50px;
+            }
+        }
     }
 
     &__text {
@@ -70,7 +76,7 @@
         font-family: "Golos Text", sans-serif;
         max-width: 450px;
         width: 100%;
-        @media screen and (max-width: 815px) {
+        @media screen and (max-width: 1024px) {
             max-width: 100%;
         }
         P:first-of-type {
@@ -130,10 +136,10 @@
     }
 
     &__slide {
-        flex: 0 0 calc(343px);
+        flex: 0 0 calc(300px);
+
         display: flex;
         flex-direction: column;
-        
     }
 
     &__slide-link {

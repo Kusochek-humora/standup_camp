@@ -66,8 +66,11 @@ li {
     padding: 0;
     list-style: none;
 }
-
+span {
+    font-family: "Oswald", sans-serif;
+}
 button {
+    font-family: "Oswald", sans-serif;
     display: block;
     background: none;
     border: none;
@@ -144,6 +147,7 @@ input {
     text-transform: uppercase;
 }
 .button {
+    font-family: "Oswald", sans-serif;
     padding: 10px;
     min-height: 60px;
     height: auto;
