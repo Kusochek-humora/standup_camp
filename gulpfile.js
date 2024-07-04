@@ -45,7 +45,7 @@ export const buildJs = (done) => {
 		.pipe(gulp.dest('dist/js'))
 		.pipe(sync.stream());
 
-	gulp.src('src/js/main.js')
+        gulp.src('src/js/**/*.js') // Выбираем .js файлы директории /js
 		.pipe(plumber())
 		.pipe(rigger())
 		.pipe(babel({
@@ -54,10 +54,9 @@ export const buildJs = (done) => {
 		.pipe(sourcemaps.init())
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
-		.pipe(concat('main.min.js'))
+		.pipe(rename(path => {path.basename += '.min'})) // Сохраняем имя файла в формате {fileName}.min.js
 		.pipe(gulp.dest('dist/js'))
 		.pipe(sync.stream());
-
 	done();
 };
 

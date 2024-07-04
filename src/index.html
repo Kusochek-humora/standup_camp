@@ -2,7 +2,8 @@
 <html lang="ru">
 
 <!--#include virtual="/templates/_head.html" -->
-<script src="https://mapgl.2gis.com/api/js/v1"></script>
+<script src="https://api-maps.yandex.ru/v3/?apikey=e4459ef2-7e9b-4a51-a4fe-e8f4246df473&lang=ru_RU"></script>
+
 
 <body class="wrapper" background-color="black">
     <nav class="menu" id="menu-mobile">
@@ -105,7 +106,8 @@
                                     fill="white" />
                             </svg>
                         </div>
-                        <figcaption class="promo__features-description"><strong><span>лучшие</span> <span>комики</span>
+                        <figcaption class="promo__features-description"><strong><span>лучшие</span>
+                                <span>комики</span>
                             </strong></figcaption>
                     </figure>
                     <figure class="promo__features-item">
@@ -123,18 +125,19 @@
                                     </g>
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_2020_3512">
+                                    <clippath id="clip0_2020_3512">
                                         <rect width="80" height="80" fill="white" transform="translate(0.5)" />
-                                    </clipPath>
-                                    <clipPath id="clip1_2020_3512">
+                                    </clippath>
+                                    <clippath id="clip1_2020_3512">
                                         <rect width="80" height="80" fill="white" transform="translate(1)" />
-                                    </clipPath>
+                                    </clippath>
                                 </defs>
                             </svg>
 
                         </div>
                         <figcaption class="promo__features-description"><strong>
-                                <span>смешные</span> <span>шутки</span></strong></figcaption>
+                                <span>смешные</span>
+                                <span>шутки</span></strong></figcaption>
                     </figure>
                     <figure class="promo__features-item">
                         <div class="promo__features-img"><svg width="80" height="80" viewBox="0 0 80 80" fill="none"
@@ -145,44 +148,57 @@
                                         fill="white" />
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_2020_1158">
+                                    <clippath id="clip0_2020_1158">
                                         <rect width="80" height="80" fill="white" />
-                                    </clipPath>
+                                    </clippath>
                                 </defs>
                             </svg>
                         </div>
-                        <figcaption class="promo__features-description"><strong><span>вкусная</span> <span>еда</span>
+                        <figcaption class="promo__features-description"><strong><span>вкусная</span>
+                                <span>еда</span>
                             </strong></figcaption>
                     </figure>
                 </div>
             </div>
-
-
         </section>
+
         <section class="schedule" id="schedule">
             <div class="schedule__container container">
                 <div class="schedule__top">
                     <h2 class="schedule__title">
                         расписание на неделю
                     </h2>
-                    <a href="#" class="schedule__link" target="_blank"><span>мы на </span> <span>sxodim.com</span></a>
+                    <a href="#" class="schedule__link" target="_blank"><span>мы на </span>
+                        <span>sxodim.com</span></a>
                 </div>
                 <div class="schedule__triggers" id="triggers">
                     <button class="schedule__triggers-btn active" type="button" data-filter="all">Вся неделя</button>
                     <button class="schedule__triggers-btn" type="button" data-filter=".today">Сегодня</button>
                     <button class="schedule__triggers-btn" type="button" data-filter=".wd">вт, 3 июня</button>
-                    <button class="schedule__triggers-btn" type="button">ср, 4 июня</button>
-                    <button class="schedule__triggers-btn" type="button">чт, 5 июня</button>
-                    <button class="schedule__triggers-btn" type="button">пт, 6 июня</button>
-                    <button class="schedule__triggers-btn" type="button">сб, 7 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
-                    <button class="schedule__triggers-btn" type="button">пт, 6 июня</button>
-                    <button class="schedule__triggers-btn" type="button">сб, 7 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
-                    <button class="schedule__triggers-btn" type="button">вс, 8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">ср,
+                        4 июня</button>
+                    <button class="schedule__triggers-btn" type="button">чт,
+                        5 июня</button>
+                    <button class="schedule__triggers-btn" type="button">пт,
+                        6 июня</button>
+                    <button class="schedule__triggers-btn" type="button">сб,
+                        7 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">пт,
+                        6 июня</button>
+                    <button class="schedule__triggers-btn" type="button">сб,
+                        7 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
+                    <button class="schedule__triggers-btn" type="button">вс,
+                        8 июня</button>
                 </div>
                 <div class="schedule__content">
                     <figure class="mix schedule__event today" data-order="1">
@@ -190,10 +206,12 @@
                             <img src="images/schedule-1.jpg" alt="мероприятие" class="schedule__event-img">
                         </div>
                         <figcaption class="schedule__event-description">
-                            <h3 class="schedule__event-title">Четыре секретных комика с лучшим материалом</h3>
-                            <time datetime="" class="schedule__event-date"><span>31 мая
+                            <h3 class="schedule__event-title">Четыре
+                                секретных комика с лучшим материалом</h3>
+                            <time datetime class="schedule__event-date"><span>31 мая
                                     2024</span><span>21:00</span></time>
-                            <div class="schedule__event-place">Harats Pub</div>
+                            <div class="schedule__event-place">Harats
+                                Pub</div>
 
                         </figcaption>
                         <a href="#" class="schedule__event-link button" target="_blank">купить билет</a>
@@ -203,11 +221,14 @@
                             <img src="images/schedule-1.jpg" alt="мероприятие" class="schedule__event-img">
                         </div>
                         <figcaption class="schedule__event-description">
-                            <h3 class="schedule__event-title">Четыре секретных комика с лучшим материалом Четыре
-                                секретных комика с лучшим материаломЧетыре секретных комика с лучшим материалом</h3>
-                            <time datetime="" class="schedule__event-date"><span>31 мая
+                            <h3 class="schedule__event-title">Четыре
+                                секретных комика с лучшим материалом Четыре
+                                секретных комика с лучшим материаломЧетыре
+                                секретных комика с лучшим материалом</h3>
+                            <time datetime class="schedule__event-date"><span>31 мая
                                     2024</span><span>21:00</span></time>
-                            <div class="schedule__event-place">Harats Pub</div>
+                            <div class="schedule__event-place">Harats
+                                Pub</div>
                         </figcaption>
                         <a href="#" class="schedule__event-link button" target="_blank">купить билет</a>
                     </figure>
@@ -223,14 +244,15 @@
                         <span>которые у нас выступают</span>
                     </h2>
                     <div class="comedians__text">
-                        <p> На наших площадках <strong>каждый день</strong> выступают опытные комики, участники проектов
+                        <p> На наших площадках <strong>каждый день</strong>
+                            выступают опытные комики, участники проектов
                             на ТНТ, Labelcom
                             и
                             независимые артисты.</p>
-                        <p>Вы точно найдете мероприятие с любимым комиком и насладитесь его шутками под вкусный ужин.
+                        <p>Вы точно найдете мероприятие с любимым комиком и
+                            насладитесь его шутками под вкусный ужин.
                         </p>
                     </div>
-
 
                 </div>
                 <div class="comedians__gallery">
@@ -342,11 +364,13 @@
                         <span>you</span><span>tube</span>
                     </h2>
                     <div class="media__text">
-                        <p>Помимо оффлайн-мероприятий, наши комики делают юмористический контент онлайн.</p>
+                        <p>Помимо оффлайн-мероприятий, наши комики делают
+                            юмористический контент онлайн.</p>
                         <p> <strong>
                                 “Поговорим откровенно”
                             </strong>
-                            - шоу, где пара комиков с юмором говорят на темы любви. Подписывайтесь и
+                            - шоу, где пара комиков с юмором говорят на темы
+                            любви. Подписывайтесь и
                             смотрите контент с любимыми комиками!</p>
 
                     </div>
@@ -358,38 +382,50 @@
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                         <div class="media__slide swiper-slide">
                             <a href="#" class="media__slide-link" target="_blank"><img src="images/media-swiper-img.jpg"
                                     alt="эфир на ютубе" class="media__slide-img"></a>
-                            <h3 class="media__slide-title">Название видео</h3>
-                            <time datetime="" class="media__slide-date">15 мая 2024</time>
+                            <h3 class="media__slide-title">Название
+                                видео</h3>
+                            <time datetime class="media__slide-date">15 мая
+                                2024</time>
                         </div>
                     </div>
                 </div>
@@ -419,11 +455,13 @@
                         <span>стендап-</span><span>ужин</span>
                     </h2>
                     <div class="dinner__text">
-                        <p>Заведения, в которых проходит стендап, - это уютные рестораны и бары со
+                        <p>Заведения, в которых проходит стендап, - это
+                            уютные рестораны и бары со
                             <strong>вкусной кухней</strong> и
                             <strong>качественным алкоголем</strong> .
                         </p>
-                        <p>Вы не только посмеетесь, но и с удовольствием поужинаете с нами.</p>
+                        <p>Вы не только посмеетесь, но и с удовольствием
+                            поужинаете с нами.</p>
                     </div>
                 </div>
                 <div class="dinner__swiper swiper">
@@ -461,14 +499,19 @@
                 <div class="special__top">
                     <div class="special__caption">
                         <h2 class="special__title">корпоративы</h2>
-                        <p class="special__subtitle">Stand up ужин <strong>только для вас</strong>
+                        <p class="special__subtitle">Stand up ужин
+                            <strong>только для вас</strong>
                         </p>
                         <div class="special__text">
-                            <p> Хотите, чтобы комики выступили на вашем закрытом мероприятии? Организуем эксклюзивный
+                            <p> Хотите, чтобы комики выступили на вашем
+                                закрытом мероприятии? Организуем
+                                эксклюзивный
                                 Stand
                                 up ужин для вас!</p>
-                            <p> Подберем комиков под ваши запросы и бюджет. Организуем стендап-шоу на вашей площадке или
-                                предложим свою. Обсудим все детали заранее, чтобы в назначенное время вы расслабились и
+                            <p> Подберем комиков под ваши запросы и бюджет.
+                                Организуем стендап-шоу на вашей площадке или
+                                предложим свою. Обсудим все детали заранее,
+                                чтобы в назначенное время вы расслабились и
                                 посмеялись вместе с коллегами.</p>
                         </div>
                     </div>
@@ -482,7 +525,8 @@
                                 id="tel">
                             <button class="special__form-button" type="button">перезвоните мне</button>
                             <p class="special__form-text">
-                                Оставляя заявку, вы даете согласие на обработку персональных данных
+                                Оставляя заявку, вы даете согласие на
+                                обработку персональных данных
                             </p>
                         </form>
                     </div>
@@ -524,26 +568,33 @@
                         наши площадки
                     </h2>
                     <p class="places__text">
-                        Мы проводим стендап в заведениях со вкусной кухней и уютной атмосферой.
+                        Мы проводим стендап в заведениях со вкусной кухней и
+                        уютной атмосферой.
                     </p>
                 </div>
                 <div class="places__triggers">
                     <button class="places__triggers-btn" type="button">Все</button>
-                    <button class="places__triggers-btn" type="button">HM Lounge Bar </button>
-                    <button class="places__triggers-btn" type="button">Coffee House Grain </button>
+                    <button class="places__triggers-btn" type="button">HM
+                        Lounge Bar </button>
+                    <button class="places__triggers-btn" type="button">Coffee House Grain </button>
                     <button class="places__triggers-btn" type="button">Harats Irish Pub на Бульваре</button>
                     <button class="places__triggers-btn" type="button">Munchen</button>
                 </div>
                 <div class="places__content">
-                    <div class="places__map" id="map-2"></div>
+                    <div class="places__map" id="map">
+
+                    </div>
                     <div class="places__caption">
                         <h3 class="places__caption-title">
                             HM Lounge Bar
                         </h3>
                         <p class="places__caption-text">
-                            Уютное место, в котором всего 55 мест. С любого места отлично видно и слышно! Здесь стендап
-                            проводится в камерном помещении, поэтому во время выступлений там самая крутая атмосфера,
-                            которую так обожают и зрители, и комики. Иногда доходит до того, что люди от смеха стучат по
+                            Уютное место, в котором всего 55 мест. С любого
+                            места отлично видно и слышно! Здесь стендап
+                            проводится в камерном помещении, поэтому во
+                            время выступлений там самая крутая атмосфера,
+                            которую так обожают и зрители, и комики. Иногда
+                            доходит до того, что люди от смеха стучат по
                             столам!
                             В заведении работает бар и кухня.
                         </p>
@@ -575,18 +626,24 @@
                     <img src="images/comedian-1.jpg" alt="Фотка НАсти" class="modal__caption-img">
                 </div>
                 <div class="modal__caption-info">
-                    <p class="modal__caption-main-text">Настя Скорик – стендап-комик, участница седьмого сезона шоу
+                    <p class="modal__caption-main-text">Настя Скорик –
+                        стендап-комик, участница седьмого сезона шоу
                         «Открытый микрофон» на телеканале ТНТ.</p>
                     <p class="modal__caption-sub-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
                     </p>
 
                     <ul class="modal__social">
-                        <li class="modal__social-item"><a href="" class="modal__social-link" target="_blank"
+                        <li class="modal__social-item"><a href class="modal__social-link" target="_blank"
                                 aria-label="inst">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                     fill="none">
@@ -616,7 +673,8 @@
             <div class="modal__video">
                 <h3 class="modal__video-title">Видео</h3>
                 <p class="modal__video-text">
-                    Посмотрите видео, чтобы ознакомиться с творчеством комика:
+                    Посмотрите видео, чтобы ознакомиться с творчеством
+                    комика:
                 </p>
                 <div class="modal__video-wrapper">
                     <a href="#" class="modal__video-item" target="_blank">
@@ -630,9 +688,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-1.jpg" alt="Настя на открытом микрофоне" class="modal__video-poster">
@@ -648,9 +706,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-2.jpg" alt="Настя разъебала какой то майк" class="modal__video-poster">
@@ -662,6 +720,7 @@
         </div>
 
     </dialog>
+
     <dialog class="modal" data-content-id="2">
         <div class="modal__inner">
             <div class="modal__top">
@@ -679,18 +738,24 @@
                     <img src="images/comedian-1.jpg" alt="Фотка НАсти" class="modal__caption-img">
                 </div>
                 <div class="modal__caption-info">
-                    <p class="modal__caption-main-text">Настя Скорик – стендап-комик, участница седьмого сезона шоу
+                    <p class="modal__caption-main-text">Настя Скорик –
+                        стендап-комик, участница седьмого сезона шоу
                         «Открытый микрофон» на телеканале ТНТ.</p>
                     <p class="modal__caption-sub-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
                     </p>
 
                     <ul class="modal__social">
-                        <li class="modal__social-item"><a href="" class="modal__social-link" target="_blank"
+                        <li class="modal__social-item"><a href class="modal__social-link" target="_blank"
                                 aria-label="inst">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                     fill="none">
@@ -720,7 +785,8 @@
             <div class="modal__video">
                 <h3 class="modal__video-title">Видео</h3>
                 <p class="modal__video-text">
-                    Посмотрите видео, чтобы ознакомиться с творчеством комика:
+                    Посмотрите видео, чтобы ознакомиться с творчеством
+                    комика:
                 </p>
                 <div class="modal__video-wrapper">
                     <a href="#" class="modal__video-item" target="_blank">
@@ -734,9 +800,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-1.jpg" alt="Настя на открытом микрофоне" class="modal__video-poster">
@@ -752,9 +818,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-2.jpg" alt="Настя разъебала какой то майк" class="modal__video-poster">
@@ -766,6 +832,7 @@
         </div>
 
     </dialog>
+
     <dialog class="modal" data-content-id="3">
         <div class="modal__inner">
             <div class="modal__top">
@@ -783,18 +850,24 @@
                     <img src="images/comedian-1.jpg" alt="Фотка НАсти" class="modal__caption-img">
                 </div>
                 <div class="modal__caption-info">
-                    <p class="modal__caption-main-text">Настя Скорик – стендап-комик, участница седьмого сезона шоу
+                    <p class="modal__caption-main-text">Настя Скорик –
+                        стендап-комик, участница седьмого сезона шоу
                         «Открытый микрофон» на телеканале ТНТ.</p>
                     <p class="modal__caption-sub-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim
+                        veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
                     </p>
 
                     <ul class="modal__social">
-                        <li class="modal__social-item"><a href="" class="modal__social-link" target="_blank"
+                        <li class="modal__social-item"><a href class="modal__social-link" target="_blank"
                                 aria-label="inst">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
                                     fill="none">
@@ -824,7 +897,8 @@
             <div class="modal__video">
                 <h3 class="modal__video-title">Видео</h3>
                 <p class="modal__video-text">
-                    Посмотрите видео, чтобы ознакомиться с творчеством комика:
+                    Посмотрите видео, чтобы ознакомиться с творчеством
+                    комика:
                 </p>
                 <div class="modal__video-wrapper">
                     <a href="#" class="modal__video-item" target="_blank">
@@ -838,9 +912,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-1.jpg" alt="Настя на открытом микрофоне" class="modal__video-poster">
@@ -856,9 +930,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-2.jpg" alt="Настя разъебала какой то майк" class="modal__video-poster">
@@ -874,9 +948,9 @@
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_2020_3417">
+                                <clippath id="clip0_2020_3417">
                                     <rect width="80" height="80" fill="white" transform="translate(0.837891)" />
-                                </clipPath>
+                                </clippath>
                             </defs>
                         </svg>
                         <img src="images/poster-2.jpg" alt="Настя разъебала какой то майк" class="modal__video-poster">
@@ -889,33 +963,6 @@
 
     </dialog>
 
-    <script>
-        const map = new mapgl.Map('map-2', {
-            center: [76.91906291124276, 43.246380504242424],
-            styleZoom: 15,
-            // pitch: 40,
-            // rotation: -45,
-            key: '3da10325-5591-4d44-8c5d-e05465730cdb',
-            style: 'e05ac437-fcc2-4845-ad74-b1de9ce07555',
-            // defaultBackgroundColor: '#3b3b3b',
-
-        });
-        // , 
-        // const coords = [[76.91906291124276, 43.246380504242424], [76.931271, 43.243817], [76.92322, 43.232477], [76.934372, 43.244869]];
-        // coords.forEach((coord) => {
-        //     const marker = new mapgl.Marker(map, {
-        //         coordinates: coord,
-        //         icon: 'images/map-icon.svg',
-        //     });
-        // });
-        const places = [
-            {
-                title: ''
-            },
-        ];
-
-
-    </script>
     <!--#include virtual="/templates/_scripts.html" -->
 </body>
 

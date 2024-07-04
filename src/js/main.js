@@ -1,4 +1,6 @@
 'use strict';
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
     // бургер меню 
@@ -221,7 +223,72 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(target.value);
         target.value = `+7${target.value.slice(2)} `;
     });
+
+
+    async function initMap() {
+        await ymaps3.ready;
+        console.log(ymaps3)
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapDefaultMarker } = ymaps3;
+
+        const map = new YMap(
+            document.getElementById('map'),
+            {
+                location: {
+                    center: [76.912204, 43.236141],
+                    zoom: 12
+                },
+                theme: 'dark',
+
+            }
+        );
+        map.addChild(new YMapDefaultMarker({
+            coordinates: [34, 54],
+            title: 'Hello World!',
+            subtitle: 'kind and bright',
+            color: 'blue'
+        }));
+
+        map.addChild(new YMapDefaultSchemeLayer());
+        map.addChild(new YMapDefaultFeaturesLayer());
+        const markerElement = document.createElement('img');
+        markerElement.classList.add('marker')
+        markerElement.src = 'images/map-icon.svg';
+        const markerElement2 = document.createElement('img');
+        markerElement2.classList.add('marker')
+        markerElement2.src = 'images/map-icon.svg';
+        const marker = new YMapMarker(
+            {
+                // source: 'images/map-icon.svg', %2
+                coordinates: [76.919107, 43.246407],
+                // draggable: true,
+                mapFollowsOnDrag: true,
+                copyrightsPosition: "center center"
+            },
+            markerElement
+        );
+
+        map.addChild(marker);
+        const marker2 = new YMapMarker(
+            {
+                // source: 'images/map-icon.svg',   %2C
+                coordinates: [76.93139, 43.243735],
+                // draggable: true,
+                mapFollowsOnDrag: true,
+                iconImageOffset: [-27, -54],
+            },
+            markerElement2
+        );
+
+        map.addChild(marker2);
+    }
+
+    initMap();
+
+
+
 });
+
+
 
 
 
