@@ -241,18 +241,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
             }
         );
-        map.addChild(new YMapDefaultMarker({
-            coordinates: [34, 54],
-            title: 'Hello World!',
-            subtitle: 'kind and bright',
-            color: 'blue'
-        }));
+        // map.addChild(new YMapDefaultMarker({
+        //     coordinates: [34, 54],
+        //     title: 'Hello World!',
+        //     subtitle: 'kind and bright',
+        //     color: 'blue'
+        // }));
 
         map.addChild(new YMapDefaultSchemeLayer());
         map.addChild(new YMapDefaultFeaturesLayer());
         const markerElement = document.createElement('img');
         markerElement.classList.add('marker')
         markerElement.src = 'images/map-icon.svg';
+
+        markerElement.style.height = '54px';
+        markerElement.style.width = '54px';
+        markerElement.style.position = 'relative';
+        markerElement.style.top = '-54px'; 
+        markerElement.style.left = '-27px';
+
+        
         const markerElement2 = document.createElement('img');
         markerElement2.classList.add('marker')
         markerElement2.src = 'images/map-icon.svg';
