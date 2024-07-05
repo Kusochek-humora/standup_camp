@@ -16,7 +16,7 @@
 
         text-transform: uppercase;
 
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: 1024px) {
             font-size: 50px;
         }
     }
@@ -63,7 +63,7 @@
             border: 0px none #ffffff;
             border-radius: 19px;
         }
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: 1024px) {
             flex-direction: column;
         }
     }
@@ -107,11 +107,14 @@
         height: auto;
 
         @media screen and (max-width: 1024px) {
-       
             max-height: 275px;
             // flex: auto;
             // max-width: 1024px;
             // width: 100%;
+        }
+
+        @media screen and (max-width: 500px) {
+            flex: auto;
         }
     }
 
@@ -126,7 +129,6 @@
         }
 
         @media screen and (max-width: 1024px) {
-       
             // min-height: 275px;
             flex: 1 1 100%;
         }
@@ -173,7 +175,7 @@
             background-color: $black;
             border: 2px solid $black;
         }
-        @media screen and (max-width: 1024px){
+        @media screen and (max-width: 1024px) {
             max-width: 320px;
             width: 100%;
         }
