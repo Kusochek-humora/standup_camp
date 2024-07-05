@@ -107,6 +107,7 @@
         height: auto;
 
         @media screen and (max-width: 1024px) {
+            min-height: auto;
             max-height: 275px;
             // flex: auto;
             // max-width: 1024px;
