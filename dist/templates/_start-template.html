@@ -25,31 +25,31 @@
     <nav class="container header__container">
         <ul class="header__list">
             <li class="header__list-item">
-                <a href class="header__list-link">Расписание</a>
+                <a data-href="#schedule" class="anchors-link header__list-link">Расписание</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">комики</a>
+                <a data-href="#comedians" class="anchors-link header__list-link">комики</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Стендап-ужин</a>
+                <a data-href="#dinner" class="anchors-link header__list-link">Стендап-ужин</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Корпоративы</a>
+                <a data-href="#special" class="anchors-link header__list-link">Корпоративы</a>
             </li>
 
         </ul>
-        <a href class="header__logo" target="_blank" title="логотип">
+        <a data-href="#header" class="header__logo anchors-link" target="_blank" title="логотип">
             <img class="header__logo-img" src="images/logo.svg" alt="Logo icon">
         </a>
         <ul class="header__list">
             <li class="header__list-item">
-                <a href class="header__list-link">youtube</a>
+                <a data-href="#media" class="anchors-link header__list-link">youtube</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Площадки</a>
+                <a data-href="#places" class="anchors-link header__list-link">Площадки</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">контакты</a>
+                <a data-href="#contacts" class="anchors-link header__list-link">контакты</a>
             </li>
         </ul>
         <a href="tel:+77058901127" class="header__tel">+7 705 890 11 27</a>
@@ -95,7 +95,11 @@
 
     </main>
     <footer class="footer">
-	<!-- templates -->
+	<div class="footer__container container">
+		<p class="footer__copyright">© 2024. Stand Up Camp</p>
+		<img src="images/footer__logo.svg" alt="logo" class="footer__logo">
+		<a href="#" download class="footer__confideince">Политика конфидециальности</a>
+	</div>
 </footer>
 
     <script src="js/main.min.js"></script>

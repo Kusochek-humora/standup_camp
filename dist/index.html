@@ -56,44 +56,44 @@
 
         </ul>
         <ul class="menu__list">
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">Расписание</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">комики</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">Стендап-ужин</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">Корпоративы</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">youtube</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">площадки</a></li>
-            <li class="menu__list-item"><a href="#" target="_blank" class="menu__list-link">контакты</a></li>
+            <li class="menu__list-item"><a data-href="#schedule" class="anchors-link menu__list-link">Расписание</a></li>
+            <li class="menu__list-item"><a data-href="#comedians" class="anchors-link menu__list-link">комики</a></li>
+            <li class="menu__list-item"><a data-href="#dinner" class="anchors-link menu__list-link">Стендап-ужин</a></li>
+            <li class="menu__list-item"><a data-href="#special" class="anchors-link menu__list-link">Корпоративы</a></li>
+            <li class="menu__list-item"><a data-href="#media" class="anchors-link menu__list-link">youtube</a></li>
+            <li class="menu__list-item"><a data-href="#places" class="anchors-link menu__list-link">площадки</a></li>
+            <li class="menu__list-item"><a data-href="#contacts" class="anchors-link menu__list-link">контакты</a></li>
         </ul>
     </nav>
     <header class="header">
     <nav class="container header__container">
         <ul class="header__list">
             <li class="header__list-item">
-                <a href class="header__list-link">Расписание</a>
+                <a data-href="#schedule" class="anchors-link header__list-link">Расписание</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">комики</a>
+                <a data-href="#comedians" class="anchors-link header__list-link">комики</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Стендап-ужин</a>
+                <a data-href="#dinner" class="anchors-link header__list-link">Стендап-ужин</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Корпоративы</a>
+                <a data-href="#special" class="anchors-link header__list-link">Корпоративы</a>
             </li>
 
         </ul>
-        <a href class="header__logo" target="_blank" title="логотип">
+        <a data-href="#header" class="header__logo anchors-link" target="_blank" title="логотип">
             <img class="header__logo-img" src="images/logo.svg" alt="Logo icon">
         </a>
         <ul class="header__list">
             <li class="header__list-item">
-                <a href class="header__list-link">youtube</a>
+                <a data-href="#media" class="anchors-link header__list-link">youtube</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">Площадки</a>
+                <a data-href="#places" class="anchors-link header__list-link">Площадки</a>
             </li>
             <li class="header__list-item">
-                <a href class="header__list-link">контакты</a>
+                <a data-href="#contacts" class="anchors-link header__list-link">контакты</a>
             </li>
         </ul>
         <a href="tel:+77058901127" class="header__tel">+7 705 890 11 27</a>
@@ -658,20 +658,94 @@
                     </p>
                 </div>
                 <div class="places__triggers">
-                    <button class="places__triggers-btn" type="button">Все</button>
-                    <button class="places__triggers-btn" type="button">HM
+                    <button class="places__triggers-btn active" type="button" data-trigger="all">Все</button>
+                    <button class="places__triggers-btn" data-trigger="HM Lounge Bar" type="button">HM
                         Lounge Bar </button>
-                    <button class="places__triggers-btn" type="button">Coffee House Grain </button>
-                    <button class="places__triggers-btn" type="button">Harats Irish Pub на Бульваре</button>
-                    <button class="places__triggers-btn" type="button">Munchen</button>
+                    <button class="places__triggers-btn" data-trigger="Coffee House Grain" type="button">Coffee House
+                        Grain </button>
+                    <button class="places__triggers-btn" data-trigger="Harats Irish Pub на Бульваре"
+                        type="button">Harats Irish Pub на Бульваре</button>
+                    <button class="places__triggers-btn" data-trigger="Munchen" type="button">Munchen</button>
                 </div>
                 <div class="places__content">
                     <div class="places__map" id="map">
 
                     </div>
-                    <div class="places__caption">
+                    <div data-content="all" class="places__caption active">
+                        <h3 class="places__caption-title">
+                            Все места
+                        </h3>
+                        <p class="places__caption-text">
+                            HMLounge Bar, <br>
+                            Coffee House Grain <br>
+                            Harats Irish Pub на Бульваре <br>
+                            Munchen
+                        </p>
+                        <address class="places__caption-address">
+
+                        </address>
+                        <!-- <button class="places__caption-copy button" type="button">Копировать адресс</button> -->
+                    </div>
+                    <div data-content="HM Lounge Bar" class="places__caption">
                         <h3 class="places__caption-title">
                             HM Lounge Bar
+                        </h3>
+                        <p class="places__caption-text">
+                            Уютное место, в котором всего 55 мест. С любого
+                            места отлично видно и слышно! Здесь стендап
+                            проводится в камерном помещении, поэтому во
+                            время выступлений там самая крутая атмосфера,
+                            которую так обожают и зрители, и комики. Иногда
+                            доходит до того, что люди от смеха стучат по
+                            столам!
+                            В заведении работает бар и кухня.
+                        </p>
+                        <address class="places__caption-address">
+                            Жамбыла, 133
+                        </address>
+                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                    </div>
+                    <div data-content="Coffee House Grain" class="places__caption">
+                        <h3 class="places__caption-title">
+                            Coffee House Grain
+                        </h3>
+                        <p class="places__caption-text">
+                            Уютное место, в котором всего 55 мест. С любого
+                            места отлично видно и слышно! Здесь стендап
+                            проводится в камерном помещении, поэтому во
+                            время выступлений там самая крутая атмосфера,
+                            которую так обожают и зрители, и комики. Иногда
+                            доходит до того, что люди от смеха стучат по
+                            столам!
+                            В заведении работает бар и кухня.
+                        </p>
+                        <address class="places__caption-address">
+                            Жамбыла, 133
+                        </address>
+                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                    </div>
+                    <div data-content="Harats Irish Pub на Бульваре" class="places__caption">
+                        <h3 class="places__caption-title">
+                            Harats Irish Pub на Бульваре
+                        </h3>
+                        <p class="places__caption-text">
+                            Уютное место, в котором всего 55 мест. С любого
+                            места отлично видно и слышно! Здесь стендап
+                            проводится в камерном помещении, поэтому во
+                            время выступлений там самая крутая атмосфера,
+                            которую так обожают и зрители, и комики. Иногда
+                            доходит до того, что люди от смеха стучат по
+                            столам!
+                            В заведении работает бар и кухня.
+                        </p>
+                        <address class="places__caption-address">
+                            Жамбыла, 133
+                        </address>
+                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                    </div>
+                    <div data-content="Munchen" class="places__caption">
+                        <h3 class="places__caption-title">
+                            Munchen
                         </h3>
                         <p class="places__caption-text">
                             Уютное место, в котором всего 55 мест. С любого
@@ -691,10 +765,47 @@
                 </div>
             </div>
         </section>
-        <section class="contacts" id="contacts"></section>
+        <section class="contacts" id="contacts">
+            <div class="contacts__container container">
+                <h2 class="contacts__title">
+                    Контакты
+                </h2>
+                <p class="contacts__company">
+                    Stand Up Camp
+                </p>
+                <a href="tel:+77058901127" class="contacts__tel">+7 705 890 11 27</a>
+                <ul class="contacts__social">
+                    <li class="contacts__social-item"><a href="#" aria-label="Instagram" target="_blank" class="contacts__social-link"><svg
+                                width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0ZM15.6027 9.39778C16.7405 9.346 17.1041 9.33333 20.001 9.33333H19.9977C22.8955 9.33333 23.2577 9.346 24.3955 9.39778C25.5311 9.44978 26.3066 9.62956 26.9866 9.89334C27.6889 10.1656 28.2822 10.53 28.8755 11.1234C29.4689 11.7162 29.8333 12.3114 30.1067 13.0129C30.3689 13.6912 30.5489 14.4663 30.6022 15.6018C30.6533 16.7396 30.6667 17.1032 30.6667 20.0001C30.6667 22.897 30.6533 23.2597 30.6022 24.3975C30.5489 25.5326 30.3689 26.308 30.1067 26.9864C29.8333 27.6877 29.4689 28.2829 28.8755 28.8758C28.2829 29.4691 27.6886 29.8344 26.9873 30.1069C26.3086 30.3707 25.5326 30.5504 24.397 30.6024C23.2593 30.6542 22.8968 30.6669 19.9997 30.6669C17.103 30.6669 16.7396 30.6542 15.6018 30.6024C14.4665 30.5504 13.6912 30.3707 13.0125 30.1069C12.3114 29.8344 11.7162 29.4691 11.1236 28.8758C10.5305 28.2829 10.166 27.6877 9.89334 26.9862C9.62978 26.308 9.45 25.5328 9.39778 24.3973C9.34622 23.2595 9.33333 22.897 9.33333 20.0001C9.33333 17.1032 9.34667 16.7394 9.39756 15.6016C9.44867 14.4665 9.62867 13.6912 9.89312 13.0127C10.1665 12.3114 10.5309 11.7162 11.1242 11.1234C11.7171 10.5302 12.3123 10.1658 13.0138 9.89334C13.692 9.62956 14.4672 9.44978 15.6027 9.39778Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.0435 11.2556C19.2293 11.2553 19.4292 11.2554 19.6449 11.2555L20.0004 11.2556C22.8484 11.2556 23.186 11.2658 24.3107 11.3169C25.3507 11.3645 25.9151 11.5383 26.2911 11.6843C26.7889 11.8776 27.1438 12.1087 27.5169 12.4821C27.8903 12.8554 28.1214 13.211 28.3151 13.7087C28.4611 14.0843 28.6352 14.6487 28.6825 15.6888C28.7336 16.8132 28.7447 17.151 28.7447 19.9977C28.7447 22.8444 28.7336 23.1822 28.6825 24.3066C28.6349 25.3466 28.4611 25.9111 28.3151 26.2866C28.1218 26.7844 27.8903 27.1389 27.5169 27.512C27.1436 27.8853 26.7891 28.1164 26.2911 28.3098C25.9156 28.4564 25.3507 28.6298 24.3107 28.6773C23.1862 28.7284 22.8484 28.7396 20.0004 28.7396C17.1521 28.7396 16.8146 28.7284 15.6901 28.6773C14.6501 28.6293 14.0857 28.4556 13.7094 28.3096C13.2117 28.1162 12.8561 27.8851 12.4828 27.5118C12.1094 27.1384 11.8783 26.7838 11.6845 26.2858C11.5385 25.9102 11.3645 25.3457 11.3172 24.3057C11.2661 23.1813 11.2559 22.8435 11.2559 19.995C11.2559 17.1465 11.2661 16.8105 11.3172 15.6861C11.3647 14.6461 11.5385 14.0816 11.6845 13.7056C11.8779 13.2078 12.1094 12.8523 12.4828 12.4789C12.8561 12.1056 13.2117 11.8745 13.7094 11.6807C14.0854 11.534 14.6501 11.3607 15.6901 11.3129C16.6741 11.2685 17.0555 11.2552 19.0435 11.2529V11.2556ZM25.6942 13.0267C24.9876 13.0267 24.4142 13.5994 24.4142 14.3063C24.4142 15.013 24.9876 15.5863 25.6942 15.5863C26.4009 15.5863 26.9742 15.013 26.9742 14.3063C26.9742 13.5996 26.4009 13.0263 25.6942 13.0263V13.0267ZM14.5226 20.0001C14.5226 16.9751 16.9751 14.5224 20.0002 14.5223C23.0253 14.5223 25.4773 16.975 25.4773 20.0001C25.4773 23.0253 23.0255 25.4769 20.0004 25.4769C16.9753 25.4769 14.5226 23.0253 14.5226 20.0001Z"
+                                    fill="white" />
+                                <path
+                                    d="M20.0009 16.4446C21.9645 16.4446 23.5565 18.0364 23.5565 20.0002C23.5565 21.9637 21.9645 23.5558 20.0009 23.5558C18.0371 23.5558 16.4453 21.9637 16.4453 20.0002C16.4453 18.0364 18.0371 16.4446 20.0009 16.4446Z"
+                                    fill="white" />
+                            </svg>
+                        </a></li>
+                    <li class="contacts__social-item"><a href="#" aria-label="Whatsapp" target="_blank" class="contacts__social-link">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 20C0 31.0457 8.9543 40 20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20ZM32.5518 19.2346C32.5492 25.7902 27.2162 31.1244 20.6592 31.1271H20.6543C18.6639 31.1264 16.7082 30.627 14.9711 29.6795L8.66667 31.3333L10.3538 25.1707C9.31311 23.3671 8.76548 21.3212 8.76637 19.2252C8.76898 12.6681 14.104 7.33333 20.6591 7.33333C23.8405 7.33471 26.8265 8.57322 29.0718 10.8212C31.3172 13.069 32.553 16.0569 32.5518 19.2346Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5212 28.508L15.2623 27.5266L15.6233 27.7408C17.1409 28.6414 18.8806 29.1179 20.6543 29.1186H20.6584C26.1065 29.1186 30.5407 24.6843 30.5429 19.2339C30.5439 16.5927 29.5168 14.1092 27.6505 12.2408C25.7843 10.3724 23.3024 9.34296 20.6622 9.34204C15.2099 9.34204 10.7756 13.7759 10.7734 19.2259C10.7727 21.0937 11.2953 22.9126 12.2847 24.4864L12.5198 24.8604L11.5212 28.508ZM26.2428 21.7951C26.4501 21.8952 26.59 21.9629 26.6498 22.0626C26.724 22.1865 26.724 22.7815 26.4765 23.4757C26.2288 24.1698 25.0417 24.8033 24.4707 24.8886C23.9588 24.9652 23.3109 24.9971 22.5991 24.7709C22.1675 24.6339 21.614 24.4511 20.905 24.1449C18.1193 22.942 16.2366 20.242 15.8808 19.7317C15.8559 19.696 15.8385 19.671 15.8288 19.658L15.8264 19.6548C15.6691 19.4449 14.6154 18.039 14.6154 16.584C14.6154 15.2152 15.2878 14.4978 15.5972 14.1675C15.6184 14.1449 15.6379 14.1241 15.6554 14.105C15.9278 13.8075 16.2497 13.7331 16.4478 13.7331C16.6459 13.7331 16.8442 13.735 17.0174 13.7437C17.0387 13.7447 17.0609 13.7446 17.0839 13.7445C17.2571 13.7435 17.473 13.7422 17.6859 14.2538C17.7679 14.4506 17.8878 14.7425 18.0142 15.0503C18.2699 15.6728 18.5524 16.3606 18.6021 16.4602C18.6764 16.6089 18.7259 16.7824 18.6269 16.9808C18.612 17.0106 18.5983 17.0386 18.5851 17.0655C18.5107 17.2173 18.456 17.3291 18.3298 17.4765C18.2801 17.5345 18.2288 17.597 18.1775 17.6594C18.0752 17.7839 17.973 17.9084 17.884 17.9971C17.7352 18.1453 17.5804 18.3061 17.7537 18.6036C17.9271 18.9011 18.5234 19.8741 19.4068 20.6621C20.3564 21.5091 21.1818 21.8671 21.6001 22.0485C21.6818 22.084 21.748 22.1127 21.7965 22.137C22.0936 22.2858 22.2669 22.2609 22.4403 22.0626C22.6136 21.8643 23.1831 21.1949 23.3812 20.8974C23.5792 20.6001 23.7774 20.6496 24.0497 20.7487C24.3222 20.848 25.7831 21.5668 26.0803 21.7155C26.1383 21.7446 26.1925 21.7708 26.2428 21.7951Z" fill="white"/>
+                        </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     <footer class="footer">
-	<!-- templates -->
+	<div class="footer__container container">
+		<p class="footer__copyright">© 2024. Stand Up Camp</p>
+		<img src="images/footer__logo.svg" alt="logo" class="footer__logo">
+		<a href="#" download class="footer__confideince">Политика конфидециальности</a>
+	</div>
 </footer>
     <dialog class="modal" data-content-id="1">
         <div class="modal__inner">
@@ -1050,9 +1161,9 @@
 
     </dialog>
 
-    <script src="js/main.min.js?=1720104856829"></script>
-<!-- <script src="js/map.min.js?=1720104856829"></script> -->
-<script src="js/vendor.min.js?=1720104856829"></script>
+    <script src="js/main.min.js?=1720152439513"></script>
+<!-- <script src="js/map.min.js?=1720152439513"></script> -->
+<script src="js/vendor.min.js?=1720152439513"></script>
 </body>
 
 </html>

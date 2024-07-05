@@ -15,6 +15,10 @@
         font-weight: 600;
 
         text-transform: uppercase;
+
+        @media screen and (max-width: 1024px){
+            font-size: 50px;
+        }
     }
 
     &__text {
@@ -59,6 +63,9 @@
             border: 0px none #ffffff;
             border-radius: 19px;
         }
+        @media screen and (max-width: 1024px){
+            flex-direction: column;
+        }
     }
 
     &__triggers-btn {
@@ -87,21 +94,42 @@
     &__content {
         display: flex;
         gap: 0 20px;
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     &__map {
-        flex: 0 0 773px;
+        flex: 1 1 700px;
 
         min-height: 410px;
         height: auto;
+
+        @media screen and (max-width: 1024px) {
+       
+            max-height: 275px;
+            // flex: auto;
+            // max-width: 1024px;
+            // width: 100%;
+        }
     }
 
     &__caption {
-        flex: 0 0 357px;
+        flex: 0 1 357px;
         padding: 20px;
         background: $red;
-        display: flex;
+        display: none;
         flex-direction: column;
+        &.active {
+            display: flex;
+        }
+
+        @media screen and (max-width: 1024px) {
+       
+            // min-height: 275px;
+            flex: 1 1 100%;
+        }
     }
 
     &__caption-title {
@@ -144,6 +172,10 @@
         &:hover {
             background-color: $black;
             border: 2px solid $black;
+        }
+        @media screen and (max-width: 1024px){
+            max-width: 320px;
+            width: 100%;
         }
         // background-color: $black;
     }

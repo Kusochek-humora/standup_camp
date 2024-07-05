@@ -217,83 +217,176 @@ document.addEventListener('DOMContentLoaded', function () {
     // обработка формы .special>form
     const telInput = document.getElementById('tel');
     VMasker(telInput).maskPattern('+9 (999) 999-99-99')
-    console.dir(telInput)
     telInput.addEventListener('input', function (event) {
-        const target = event.target
-        console.log(target.value);
+        const target = event.target;
         target.value = `+7${target.value.slice(2)} `;
     });
 
 
-    async function initMap() {
-        await ymaps3.ready;
-        console.log(ymaps3)
-        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapDefaultMarker } = ymaps3;
+    // настройка карты , табы section.places
+    const places = [{
+        title: 'all',
+        coord: [76.927728, 43.241132],
+        zoom: 14
+    },
 
-        const map = new YMap(
+    {
+        title: "HM Lounge Bar",
+        coord: [76.919107, 43.246407],
+        mapFollowsOnDrag: true,
+        copyrightsPosition: "center center",
+        zoom: 17
+    },
+    {
+        title: 'Coffee House Grain',
+        coord: [76.93139, 43.243735],
+        mapFollowsOnDrag: true,
+        copyrightsPosition: "center center",
+        zoom: 17
+    },
+    {
+        title: 'Harats Irish Pub на Бульваре',
+        coord: [76.923477, 43.232472],
+        mapFollowsOnDrag: true,
+        copyrightsPosition: "center center",
+        zoom: 17
+    },
+    {
+        title: 'Munchen',
+        coord: [76.934375, 43.244867],
+        mapFollowsOnDrag: true,
+        copyrightsPosition: "center center",
+        zoom: 17
+    }
+
+    ];
+    let map;
+    async function initMap(center, zoom) {
+        await ymaps3.ready;
+
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker, YMapProps } = ymaps3;
+
+        map = new YMap(
             document.getElementById('map'),
             {
                 location: {
-                    center: [76.912204, 43.236141],
-                    zoom: 12
+                    center: center,
+                    zoom: zoom
                 },
                 theme: 'dark',
 
             }
         );
-        // map.addChild(new YMapDefaultMarker({
-        //     coordinates: [34, 54],
-        //     title: 'Hello World!',
-        //     subtitle: 'kind and bright',
-        //     color: 'blue'
-        // }));
-
+        // map.addChild(new YMapProps());
         map.addChild(new YMapDefaultSchemeLayer());
         map.addChild(new YMapDefaultFeaturesLayer());
-        const markerElement = document.createElement('img');
-        markerElement.classList.add('marker')
-        markerElement.src = 'images/map-icon.svg';
+        function createHTMLMarker() {
+            const markerHTML = document.createElement('img');
+            markerHTML.classList.add('marker')
+            markerHTML.src = 'images/map-icon.svg';
+            markerHTML.style.height = '54px';
+            markerHTML.style.width = '54px';
+            markerHTML.style.position = 'relative';
+            markerHTML.style.top = '-54px';
+            markerHTML.style.left = '-27px';
+            return markerHTML;
+        }
+        function mapHandler(places) {
 
-        markerElement.style.height = '54px';
-        markerElement.style.width = '54px';
-        markerElement.style.position = 'relative';
-        markerElement.style.top = '-54px'; 
-        markerElement.style.left = '-27px';
+            places.forEach(place => {
 
-        
-        const markerElement2 = document.createElement('img');
-        markerElement2.classList.add('marker')
-        markerElement2.src = 'images/map-icon.svg';
-        const marker = new YMapMarker(
-            {
-                // source: 'images/map-icon.svg', %2
-                coordinates: [76.919107, 43.246407],
-                // draggable: true,
-                mapFollowsOnDrag: true,
-                copyrightsPosition: "center center"
-            },
-            markerElement
-        );
+                const { title, coord, mapFollowsOnDrag, copyrightsPosition } = place;
+                const markerHTML = createHTMLMarker();
 
-        map.addChild(marker);
-        const marker2 = new YMapMarker(
-            {
-                // source: 'images/map-icon.svg',   %2C
-                coordinates: [76.93139, 43.243735],
-                // draggable: true,
-                mapFollowsOnDrag: true,
-                iconImageOffset: [-27, -54],
-            },
-            markerElement2
-        );
 
-        map.addChild(marker2);
+                const marker = new YMapMarker(
+                    {
+                        coordinates: coord,
+                        mapFollowsOnDrag: mapFollowsOnDrag,
+                        copyrightsPosition: copyrightsPosition
+                    },
+                    markerHTML
+                );
+                map.addChild(marker);
+            });
+        };
+        mapHandler(places);
+    }
+    initMap([76.927728, 43.241132], 14);
+
+    const placesTriggers = document.querySelector('.places__triggers');
+    const placeTriggerBtns = document.querySelectorAll('.places__triggers-btn');
+    const placeCaption = document.querySelectorAll('.places__caption');
+    function removeClassesTriggers() {
+        placeTriggerBtns.forEach((btn, index) => {
+            btn.classList.remove('active');
+            placeCaption[index].classList.remove('active');
+        });
     }
 
-    initMap();
+    function tabMaps(e) {
+        const target = e.target;
+
+        if (target && target.hasAttribute('data-trigger')) {
+            removeClassesTriggers();
+            target.classList.add('active');
+            document.querySelector(`[data-content="${target.dataset.trigger}"]`).classList.add('active');
+            places.forEach(place => {
+                const { title, coord, zoom } = place;
+                if (target.dataset.trigger === title) {
+                    map.destroy();
+                    initMap(coord, zoom);
+                }
+            });
+        }
+
+    };
+    placesTriggers.addEventListener('click', tabMaps);
 
 
 
+
+
+    // якорные ссылки
+
+    const links = document.querySelectorAll('.anchors-link');
+    const mobileMenu = document.getElementById('menu-mobile');
+
+
+    mobileMenu.addEventListener('click', function (e) {
+        const target = e.target;
+        links.forEach((item, index) => {
+            if (target && target === item) {
+                buttonMenu.classList.remove('active');
+                menuMobile.classList.remove('active');
+                document.body.classList.remove('active');
+            }
+        })
+    })
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+
+            const sectionId = link.getAttribute('data-href').substring(1);;
+
+
+            if (sectionId === 'header') {
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            else {
+                const section = document.getElementById(`${sectionId}`);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+
+
+        });
+    });
 });
 
 

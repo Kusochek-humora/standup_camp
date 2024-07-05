@@ -1,0 +1,45 @@
+.footer {
+    background-color: $white;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        font-family: "Golos Text", sans-serif;
+    }
+
+    &__logo {
+        display: inline-block;
+        width: 133px;
+        height: 120px;
+    }
+
+    &__copyright,
+    &__confideince {
+        min-width: 250px;
+    }
+    &__confideince {
+        text-decoration: underline;
+        font-family: "Golos Text", sans-serif;
+    }
+    @media screen and (max-width: 768px) {
+        padding-bottom: 30px;
+        &__container {
+            flex-direction: column;
+            gap: 20px 0;
+        }
+        &__logo {
+            order: 1;
+        }
+        &__copyright {
+            text-align: center;
+            order: 3;
+        }
+        &__confideince {
+            text-align: center;
+            order: 2;
+        }
+    }
+}
