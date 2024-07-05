@@ -164,3 +164,24 @@ input {
 // ::-webkit-scrollbar {
 //     display: none;
 // }
+#notification {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: $red;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
+}
+
+#notification.show {
+    visibility: visible;
+    opacity: 1;
+}

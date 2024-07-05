@@ -618,7 +618,7 @@
                         <address class="places__caption-address">
                             Жамбыла, 133
                         </address>
-                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                        <button class="places__caption-copy button" type="button" onclick="copyText('HM https://2gis.kz/almaty/geo/70000001031174805')">Копировать адресс</button>
                     </div>
                     <div data-content="Coffee House Grain" class="places__caption">
                         <h3 class="places__caption-title">
@@ -637,7 +637,7 @@
                         <address class="places__caption-address">
                             Жамбыла, 133
                         </address>
-                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                        <button class="places__caption-copy button" type="button"onclick="copyText('Coffee House Grain https://2gis.kz/almaty/geo/70000001047242662')">Копировать адресс</button>
                     </div>
                     <div data-content="Harats Irish Pub на Бульваре" class="places__caption">
                         <h3 class="places__caption-title">
@@ -656,7 +656,7 @@
                         <address class="places__caption-address">
                             Жамбыла, 133
                         </address>
-                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                        <button class="places__caption-copy button" type="button"onclick="copyText('Harat`s Pub https://2gis.kz/almaty/geo/70000001076226440')">Копировать адресс</button>
                     </div>
                     <div data-content="Munchen" class="places__caption">
                         <h3 class="places__caption-title">
@@ -675,7 +675,7 @@
                         <address class="places__caption-address">
                             Жамбыла, 133
                         </address>
-                        <button class="places__caption-copy button" type="button">Копировать адресс</button>
+                        <button class="places__caption-copy button" type="button" onclick="copyText('Munchen https://2gis.kz/almaty/geo/9429940000788898')">Копировать адресс</button>
                     </div>
                 </div>
             </div>
@@ -1070,6 +1070,25 @@
 
     </dialog>
 
+    <div id="notification">Адрес скопирован</div>
+    <script>
+            function copyText(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            showNotification();
+        }).catch(function(error) {
+            console.error("Ошибка при копировании: ", error);
+        });
+    }
+    
+    function showNotification() {
+        const notification = document.getElementById("notification");
+        notification.classList.add("show");
+    
+        setTimeout(function() {
+            notification.classList.remove("show");
+        }, 3000);
+    }
+    </script>
     <!--#include virtual="/templates/_scripts.html" -->
 </body>
 
